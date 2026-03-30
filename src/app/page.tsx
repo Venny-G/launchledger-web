@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { CtaBanner } from "@/components/cta-banner";
 import { SectionHeading } from "@/components/section-heading";
 import { Shell } from "@/components/shell";
@@ -69,12 +67,6 @@ export default function HomePage() {
                 >
                   Email questions
                 </a>
-                <Link
-                  href="/platform"
-                  className="inline-flex items-center justify-center rounded-full border border-white/10 px-5 py-3 text-sm font-semibold text-cloud transition hover:border-cyan/25 hover:text-white"
-                >
-                  View current direction
-                </Link>
               </div>
             </div>
             <div data-reveal="3" className="relative">

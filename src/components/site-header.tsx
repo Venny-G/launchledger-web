@@ -22,40 +22,24 @@ export function SiteHeader() {
       </div>
       <div className="mx-auto flex max-w-shell items-center justify-between gap-6 px-6 py-4 lg:px-8">
         <BrandMark />
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <div className="hidden md:flex md:items-center md:gap-8">
           {siteConfig.nav.map((item) => (
             <HeaderLink key={item.href} href={item.href} label={item.label} />
           ))}
-        </nav>
-        <Link
-          href="/contact"
-          className="hidden rounded-full border border-cyan/25 bg-cyan/10 px-4 py-2 text-sm font-medium text-cyan transition hover:border-cyan/40 hover:bg-cyan/14 hover:text-white md:inline-flex"
-        >
-          Contact via email
-        </Link>
-      </div>
-      <details className="border-t border-white/6 md:hidden">
-        <summary className="mx-auto flex max-w-shell cursor-pointer list-none items-center justify-between px-6 py-3 text-sm text-cloud lg:px-8">
-          Navigation
-          <span className="font-mono text-xs uppercase tracking-[0.3em] text-cyan/70">
-            Open
-          </span>
-        </summary>
-        <nav
-          className="mx-auto flex max-w-shell flex-col gap-4 px-6 pb-5 lg:px-8"
-          aria-label="Mobile"
-        >
-          {siteConfig.nav.map((item) => (
-            <HeaderLink key={item.href} href={item.href} label={item.label} />
-          ))}
-          <Link
-            href="/contact"
-            className="inline-flex w-fit rounded-full border border-cyan/25 bg-cyan/10 px-4 py-2 text-sm font-medium text-cyan transition hover:border-cyan/40 hover:bg-cyan/14 hover:text-white"
+          <a
+            href={`mailto:${siteConfig.contactEmail}`}
+            className="rounded-full border border-cyan/25 bg-cyan/10 px-4 py-2 text-sm font-medium text-cyan transition hover:border-cyan/40 hover:bg-cyan/14 hover:text-white"
           >
-            Contact via email
-          </Link>
-        </nav>
-      </details>
+            Email questions
+          </a>
+        </div>
+        <a
+          href={`mailto:${siteConfig.contactEmail}`}
+          className="inline-flex rounded-full border border-cyan/25 bg-cyan/10 px-4 py-2 text-sm font-medium text-cyan transition hover:border-cyan/40 hover:bg-cyan/14 hover:text-white md:hidden"
+        >
+          Email
+        </a>
+      </div>
     </header>
   );
 }

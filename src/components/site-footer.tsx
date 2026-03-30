@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { BrandMark } from "@/components/brand-mark";
 import { siteConfig } from "@/lib/site";
 
@@ -19,32 +17,14 @@ export function SiteFooter() {
             {siteConfig.contactEmail}
           </a>
         </div>
-        <div className="grid gap-8 sm:grid-cols-2">
-          <div className="space-y-3">
-            <p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan/70">
-              Navigate
-            </p>
-            <div className="flex flex-col gap-2 text-sm text-muted">
-              {siteConfig.nav.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="transition hover:text-white"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className="space-y-3">
-            <p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan/70">
-              Stage
-            </p>
-            <p className="text-sm leading-7 text-muted">
-              Website under construction. Direct questions and inquiries to{" "}
-              {siteConfig.contactEmail}.
-            </p>
-          </div>
+        <div className="space-y-3">
+          <p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan/70">
+            Stage
+          </p>
+          <p className="text-sm leading-7 text-muted">
+            Homepage only for now. Website under construction. Direct questions
+            and inquiries to {siteConfig.contactEmail}.
+          </p>
         </div>
       </div>
       <div className="border-t border-white/6">

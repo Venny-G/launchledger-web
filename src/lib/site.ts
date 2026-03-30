@@ -6,12 +6,7 @@ export const siteConfig = {
   extendedDescription:
     "The LaunchLedger website is currently under construction while the product direction and public presence are being refined. If you have questions or want to reach the team directly, use gvenkataashish@gmail.com.",
   url: "https://launchledger.space",
-  nav: [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/platform", label: "Platform" },
-    { href: "/contact", label: "Contact" },
-  ],
+  nav: [{ href: "/", label: "Home" }],
   contactEmail: "gvenkataashish@gmail.com",
   socialLabel:
     "Questions, partnership notes, and general inquiries should go to gvenkataashish@gmail.com while the site is under construction.",

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 type CtaBannerProps = {
@@ -23,18 +22,12 @@ export function CtaBanner({ title, body }: CtaBannerProps) {
               <p className="text-base leading-8 text-muted sm:text-lg">{body}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/contact"
+              <a
+                href={`mailto:${siteConfig.contactEmail}`}
                 className="inline-flex items-center justify-center rounded-full bg-cyan px-5 py-3 text-sm font-semibold text-slate transition hover:bg-white"
               >
                 Email {siteConfig.contactEmail}
-              </Link>
-              <Link
-                href="/platform"
-                className="inline-flex items-center justify-center rounded-full border border-white/10 px-5 py-3 text-sm font-semibold text-cloud transition hover:border-cyan/25 hover:text-white"
-              >
-                See current platform notes
-              </Link>
+              </a>
             </div>
           </div>
         </div>
