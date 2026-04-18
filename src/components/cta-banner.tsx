@@ -1,5 +1,3 @@
-import { siteConfig } from "@/lib/site";
-
 type CtaBannerProps = {
   title: string;
   body: string;
@@ -14,7 +12,7 @@ export function CtaBanner({ title, body }: CtaBannerProps) {
           <div className="relative flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl space-y-4">
               <p className="font-mono text-xs uppercase tracking-[0.34em] text-cyan/70">
-                Under construction
+                Ready to play
               </p>
               <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
                 {title}
@@ -23,10 +21,10 @@ export function CtaBanner({ title, body }: CtaBannerProps) {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href={`mailto:${siteConfig.contactEmail}`}
+                href="#midi-studio"
                 className="inline-flex items-center justify-center rounded-full bg-cyan px-5 py-3 text-sm font-semibold text-slate transition hover:bg-white"
               >
-                Email {siteConfig.contactEmail}
+                Open MIDI mode
               </a>
             </div>
           </div>

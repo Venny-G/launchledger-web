@@ -18,7 +18,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/6 bg-ink/85 backdrop-blur">
       <div className="construction-strip border-b border-amber-300/20 px-6 py-2 text-center font-mono text-[11px] uppercase tracking-[0.28em] text-amber-100 lg:px-8">
-        Under construction. Questions: {siteConfig.contactEmail}
+        Browser audio app: text playback, keyboard animation, and MIDI piano.
       </div>
       <div className="mx-auto flex max-w-shell items-center justify-between gap-6 px-6 py-4 lg:px-8">
         <BrandMark />
@@ -26,18 +26,12 @@ export function SiteHeader() {
           {siteConfig.nav.map((item) => (
             <HeaderLink key={item.href} href={item.href} label={item.label} />
           ))}
-          <a
-            href={`mailto:${siteConfig.contactEmail}`}
-            className="rounded-full border border-cyan/25 bg-cyan/10 px-4 py-2 text-sm font-medium text-cyan transition hover:border-cyan/40 hover:bg-cyan/14 hover:text-white"
-          >
-            Email questions
-          </a>
         </div>
         <a
-          href={`mailto:${siteConfig.contactEmail}`}
-          className="inline-flex rounded-full border border-cyan/25 bg-cyan/10 px-4 py-2 text-sm font-medium text-cyan transition hover:border-cyan/40 hover:bg-cyan/14 hover:text-white md:hidden"
+          href="#midi-studio"
+          className="inline-flex rounded-full border border-cyan/25 bg-cyan/10 px-4 py-2 text-sm font-medium text-cyan transition hover:border-cyan/40 hover:bg-cyan/14 hover:text-white"
         >
-          Email
+          Open piano
         </a>
       </div>
     </header>

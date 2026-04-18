@@ -28,21 +28,21 @@ const mono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "LaunchLedger | Mission Planning for Emerging Space Teams",
-    template: "%s | LaunchLedger",
+    default: "TypePiano Studio | Text Playback and MIDI Piano",
+    template: "%s | TypePiano Studio",
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: [
-    "LaunchLedger",
-    "smallsat",
-    "CubeSat",
-    "mission planning",
-    "launch access",
-    "space logistics",
+    "typing simulator",
+    "text playback",
+    "midi player",
+    "virtual piano",
+    "browser piano",
+    "web audio",
   ],
   openGraph: {
-    title: "LaunchLedger | Mission Planning for Emerging Space Teams",
+    title: "TypePiano Studio | Text Playback and MIDI Piano",
     description: siteConfig.extendedDescription,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LaunchLedger",
+    title: "TypePiano Studio",
     description: siteConfig.description,
   },
 };

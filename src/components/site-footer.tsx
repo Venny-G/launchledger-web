@@ -10,27 +10,21 @@ export function SiteFooter() {
           <p className="max-w-xl text-sm leading-7 text-muted">
             {siteConfig.extendedDescription}
           </p>
-          <a
-            href={`mailto:${siteConfig.contactEmail}`}
-            className="inline-flex text-sm text-white underline decoration-cyan/35 underline-offset-4 transition hover:decoration-cyan"
-          >
-            {siteConfig.contactEmail}
-          </a>
         </div>
         <div className="space-y-3">
           <p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan/70">
-            Stage
+            Modes
           </p>
           <p className="text-sm leading-7 text-muted">
-            Homepage only for now. Website under construction. Direct questions
-            and inquiries to {siteConfig.contactEmail}.
+            Use Text Mode to replay sentences like live typing, then switch to
+            MIDI Mode to upload files and hear them through the on-screen piano.
           </p>
         </div>
       </div>
       <div className="border-t border-white/6">
         <div className="mx-auto flex max-w-shell flex-col gap-3 px-6 py-5 text-xs text-muted sm:flex-row sm:items-center sm:justify-between lg:px-8">
           <p>{siteConfig.legalName}</p>
-          <p>Public website for LaunchLedger</p>
+          <p>Interactive text and MIDI browser app</p>
         </div>
       </div>
     </footer>
