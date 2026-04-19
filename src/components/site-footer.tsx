@@ -10,7 +10,7 @@ export function SiteFooter() {
         <div className="space-y-4">
           <BrandMark compact />
           <p className="max-w-xl text-sm leading-7 text-muted">
-            Software for clustered electric propulsion systems.
+            {siteConfig.tagline}
           </p>
           <a
             href={`mailto:${siteConfig.contactEmail}`}

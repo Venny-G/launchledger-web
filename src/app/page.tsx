@@ -11,22 +11,18 @@ import {
 } from "@/lib/site";
 
 const heroStats = [
-  { label: "Reference case", value: "4-thruster Hall cluster" },
-  { label: "Spacing range", value: "220 to 320 mm" },
+  { label: "Example configuration", value: "4-thruster Hall cluster" },
+  { label: "Spacing", value: "220 to 320 mm" },
   { label: "Primary risk", value: "Plume overlap" },
-  { label: "Review stage", value: "Pre-integration" },
 ];
 
-const flaggedInteractions = [
-  "Outer plumes begin overlapping below 240 mm spacing.",
-  "Aft-surface exposure rises near the centerline.",
-  "Power electronics zone needs wider EMI clearance.",
-];
+const heroRecommendation =
+  "Increase spacing beyond 240 mm and expand the power electronics keep-out zone before the layout is fixed.";
 
-const tradeStudyRows = [
-  { configuration: "Layout A", score: "Baseline", risk: "High overlap" },
-  { configuration: "Layout B", score: "Preferred", risk: "Manageable" },
-  { configuration: "Layout C", score: "Rejected", risk: "Thermal concern" },
+const comparisonRows = [
+  { configuration: "Layout A", outcome: "High overlap" },
+  { configuration: "Layout B", outcome: "Preferred" },
+  { configuration: "Layout C", outcome: "Thermal concern" },
 ];
 
 const workflowModules = [
@@ -94,18 +90,18 @@ export default function HomePage() {
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan/75">
-                    Review snapshot
+                    Example Assessment
                   </p>
                   <h2 className="mt-3 text-xl font-semibold tracking-tight text-white">
-                    Four-thruster review
+                    Four-thruster layout review
                   </h2>
                 </div>
                 <span className="border border-white/10 px-3 py-1 text-xs font-medium text-cloud">
-                  Example
+                  Demonstration
                 </span>
               </div>
 
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <div className="mt-6 grid gap-3 sm:grid-cols-3">
                 {heroStats.map((item) => (
                   <div
                     key={item.label}
@@ -121,53 +117,23 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="mt-5 grid gap-4 xl:grid-cols-[1.05fr_0.95fr]">
-                <div className={innerCardClass}>
-                  <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
-                    Plume overlap map
-                  </p>
-                  <div className="relative mt-4 h-48 overflow-hidden border border-white/8 bg-[#0d131a] sm:h-56">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(145,213,255,0.06),transparent_60%)]" />
-                    <div className="absolute left-[18%] top-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
-                    <div className="absolute right-[18%] top-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
-                    <div className="absolute bottom-[18%] left-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
-                    <div className="absolute bottom-[18%] right-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
-                    <div className="absolute left-[31%] top-[31%] h-24 w-24 border border-amber-200/20 bg-amber-300/10" />
-                    <div className="absolute right-[31%] top-[31%] h-24 w-24 border border-amber-200/20 bg-amber-300/10" />
-                  </div>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    <div className="border border-white/10 bg-black/20 px-3 py-1 text-[11px] text-cloud">
-                      Cyan: plume envelope
-                    </div>
-                    <div className="border border-white/10 bg-black/20 px-3 py-1 text-[11px] text-cloud">
-                      Amber: flagged overlap
-                    </div>
-                  </div>
-                </div>
-
+              <div className="mt-5 grid gap-4 xl:grid-cols-[0.95fr_1.05fr]">
                 <div className="space-y-4">
                   <div className={innerCardClass}>
                     <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
-                      Review notes
+                      Recommendation
                     </p>
-                    <div className="mt-4 space-y-2.5">
-                      {flaggedInteractions.map((item) => (
-                        <div
-                          key={item}
-                          className="border border-white/8 bg-black/15 px-3 py-3 text-sm leading-6 text-cloud"
-                        >
-                          {item}
-                        </div>
-                      ))}
-                    </div>
+                    <p className="mt-3 text-sm leading-7 text-cloud">
+                      {heroRecommendation}
+                    </p>
                   </div>
 
                   <div className={innerCardClass}>
                     <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
-                      Layout comparison
+                      Comparison
                     </p>
                     <div className="mt-4 space-y-3">
-                      {tradeStudyRows.map((row) => (
+                      {comparisonRows.map((row) => (
                         <div
                           key={row.configuration}
                           className="grid grid-cols-[1fr_auto] gap-3 border border-white/8 bg-black/15 px-3 py-3 text-sm"
@@ -176,13 +142,28 @@ export default function HomePage() {
                             <p className="font-medium text-white">
                               {row.configuration}
                             </p>
-                            <p className="mt-1 text-muted">{row.risk}</p>
+                            <p className="mt-1 text-muted">{row.outcome}</p>
                           </div>
                           <span className="self-start border border-white/10 px-2.5 py-1 text-xs text-cloud">
-                            {row.score}
+                            {row.outcome === "Preferred" ? "Keep" : "Review"}
                           </span>
                         </div>
                       ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className={innerCardClass}>
+                  <div className="relative h-56 overflow-hidden border border-white/8 bg-[#0d131a] sm:h-64">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(145,213,255,0.06),transparent_60%)]" />
+                    <div className="absolute left-[18%] top-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
+                    <div className="absolute right-[18%] top-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
+                    <div className="absolute bottom-[18%] left-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
+                    <div className="absolute bottom-[18%] right-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
+                    <div className="absolute left-[31%] top-[31%] h-24 w-24 border border-amber-200/20 bg-amber-300/10" />
+                    <div className="absolute right-[31%] top-[31%] h-24 w-24 border border-amber-200/20 bg-amber-300/10" />
+                    <div className="absolute inset-x-4 bottom-4 border border-white/10 bg-black/30 px-3 py-2 text-[11px] text-cloud">
+                      Cyan indicates plume envelope. Amber marks overlap pressure near centerline.
                     </div>
                   </div>
                 </div>
@@ -255,10 +236,10 @@ export default function HomePage() {
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan/75">
-                    Review flow
+                    Typical Review Process
                   </p>
                   <h3 className="mt-3 text-xl font-semibold text-white">
-                    How a review starts
+                    Initial Review Steps
                   </h3>
                 </div>
                 <span className="border border-white/10 px-3 py-1 text-xs text-cloud">

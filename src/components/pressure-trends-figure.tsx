@@ -61,40 +61,29 @@ export function PressureTrendsFigure() {
   return (
     <figure className="mx-auto w-full max-w-[66rem] border border-white/8 bg-panel px-4 py-5 shadow-glow sm:px-6 sm:py-6 lg:px-8">
       <div className="space-y-4">
-        <div className="space-y-2">
-          <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cyan/75">
-            Trend view
-          </p>
-          <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-            Why This Matters Through 2040
-          </h3>
-          <p className="max-w-3xl text-sm leading-7 text-muted sm:text-base">
-            Higher-power spacecraft and more demanding missions increase
-            pressure for multi-thruster propulsion architectures.
-          </p>
-          <p className="text-xs leading-6 text-cloud sm:text-sm">
-            A directional industry trend view - not a forecast.
+        <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+          <div className="space-y-2">
+            <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+              Why This Matters Through 2040
+            </h3>
+            <p className="max-w-3xl text-sm leading-7 text-muted sm:text-base">
+              Higher-power spacecraft and more demanding missions increase
+              pressure for multi-thruster propulsion architectures.
+            </p>
+          </div>
+          <p className="text-xs leading-6 text-cloud lg:text-right">
+            Qualitative industry view, not a forecast.
           </p>
         </div>
 
-          <div className="overflow-hidden border border-white/8 bg-slate">
-            <div className="h-[280px] w-full sm:h-[330px] lg:h-[390px]">
-              <svg
-                viewBox="0 0 796 360"
-                className="h-full w-full"
-              role="img"
-              aria-labelledby="pressure-trends-title pressure-trends-desc"
+        <div className="overflow-hidden border border-white/8 bg-slate">
+          <div className="h-[280px] w-full sm:h-[330px] lg:h-[390px]">
+            <svg
+              viewBox="0 0 796 360"
+              className="h-full w-full"
+              aria-hidden="true"
+              focusable="false"
             >
-              <title id="pressure-trends-title">
-                Why This Matters Through 2040
-              </title>
-              <desc id="pressure-trends-desc">
-                A directional trend figure showing satellite power
-                availability, propulsion throughput requirements, multi-thruster
-                architecture relevance, and clustered propulsion relevance
-                increasing from today through 2040.
-              </desc>
-
               <rect x="0" y="0" width="796" height="360" fill="#111923" />
 
               {gridRows.map((y) => (
@@ -174,19 +163,9 @@ export function PressureTrendsFigure() {
                   </text>
                 </g>
               ))}
-
-              <text
-                x="88"
-                y="28"
-                fontSize="12"
-                fill="rgba(153,168,181,0.85)"
-                letterSpacing="0.2em"
-              >
-                DIRECTIONAL TREND VIEW
-              </text>
             </svg>
-            </div>
           </div>
+        </div>
 
         <div className="grid gap-2.5 sm:grid-cols-2 xl:grid-cols-4">
           {trendSeries.map((series) => (

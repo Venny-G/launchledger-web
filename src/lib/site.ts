@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: "LaunchLedger",
   legalName: "LaunchLedger SpaceWorks",
+  tagline: "Software for clustered electric propulsion systems",
   description:
     "Software for clustered electric propulsion systems. Study plume interactions, spacing limits, and integration risk before hardware testing begins.",
   extendedDescription:
