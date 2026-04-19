@@ -27,7 +27,7 @@ export function SiteHeader() {
           </div>
           <a
             href={`mailto:${siteConfig.contactEmail}?subject=LaunchLedger%20Early%20Access`}
-            className="inline-flex shrink-0 rounded-full border border-cyan/25 bg-cyan/12 px-3 py-2 text-xs font-medium text-cyan transition hover:border-cyan/40 hover:bg-cyan/18 hover:text-white sm:px-4 sm:text-sm"
+            className="inline-flex shrink-0 border border-cyan/25 bg-cyan/12 px-3 py-2 text-xs font-medium text-cyan transition hover:border-cyan/40 hover:bg-cyan/18 hover:text-white sm:px-4 sm:text-sm"
           >
             Request Early Access
           </a>
@@ -38,7 +38,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="shrink-0 rounded-full border border-white/8 px-3 py-1.5 text-xs text-muted transition hover:border-white/14 hover:text-white"
+              className="shrink-0 border border-white/8 px-3 py-1.5 text-xs text-muted transition hover:border-white/14 hover:text-white"
             >
               {item.label}
             </Link>

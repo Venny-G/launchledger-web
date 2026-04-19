@@ -45,10 +45,10 @@ const workflowModules = [
 ];
 
 const outerCardClass =
-  "h-full rounded-[1.5rem] border border-white/8 bg-panel px-5 py-5 transition-colors duration-200 hover:border-white/14 hover:bg-[#17212c]";
+  "h-full border border-white/8 bg-panel px-5 py-5 transition-colors duration-200 hover:border-white/14 hover:bg-[#17212c]";
 
 const innerCardClass =
-  "h-full rounded-[1.35rem] border border-white/8 bg-slate px-4 py-4 transition-colors duration-200 hover:border-white/14 hover:bg-[#182330]";
+  "h-full border border-white/8 bg-slate px-4 py-4 transition-colors duration-200 hover:border-white/14 hover:bg-[#182330]";
 
 export default function HomePage() {
   return (
@@ -73,13 +73,13 @@ export default function HomePage() {
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
                   href={`mailto:${siteConfig.contactEmail}?subject=LaunchLedger%20Early%20Access`}
-                  className="inline-flex w-full items-center justify-center rounded-full bg-cyan px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white sm:w-auto"
+                  className="inline-flex w-full items-center justify-center border border-cyan bg-cyan px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white sm:w-auto"
                 >
                   Request Early Access
                 </a>
                 <a
                   href={`mailto:${siteConfig.contactEmail}?subject=LaunchLedger%20Founder%20Conversation`}
-                  className="inline-flex w-full items-center justify-center rounded-full border border-white/10 px-5 py-3 text-sm font-semibold text-cloud transition hover:border-cyan/30 hover:text-white sm:w-auto"
+                  className="inline-flex w-full items-center justify-center border border-white/10 px-5 py-3 text-sm font-semibold text-cloud transition hover:border-cyan/30 hover:text-white sm:w-auto"
                 >
                   Contact Founder
                 </a>
@@ -90,7 +90,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="rounded-[1.5rem] border border-white/8 bg-panel p-5 shadow-glow sm:p-6">
+            <div className="border border-white/8 bg-panel p-5 shadow-glow sm:p-6">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan/75">
@@ -100,7 +100,7 @@ export default function HomePage() {
                     Four-thruster layout check
                   </h2>
                 </div>
-                <span className="rounded-full border border-white/10 px-3 py-1 text-xs font-medium text-cloud">
+                <span className="border border-white/10 px-3 py-1 text-xs font-medium text-cloud">
                   Illustrative
                 </span>
               </div>
@@ -126,18 +126,18 @@ export default function HomePage() {
                   <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
                     Plume overlap map
                   </p>
-                  <div className="relative mt-4 h-56 overflow-hidden rounded-[1.15rem] border border-white/8 bg-[#0d131a]">
+                  <div className="relative mt-4 h-56 overflow-hidden border border-white/8 bg-[#0d131a]">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(145,213,255,0.06),transparent_60%)]" />
-                    <div className="absolute left-[18%] top-[18%] h-20 w-20 rounded-full border border-cyan/30 bg-cyan/10" />
-                    <div className="absolute right-[18%] top-[18%] h-20 w-20 rounded-full border border-cyan/30 bg-cyan/10" />
-                    <div className="absolute bottom-[18%] left-[18%] h-20 w-20 rounded-full border border-cyan/30 bg-cyan/10" />
-                    <div className="absolute bottom-[18%] right-[18%] h-20 w-20 rounded-full border border-cyan/30 bg-cyan/10" />
-                    <div className="absolute left-[31%] top-[31%] h-24 w-24 rounded-full border border-amber-200/20 bg-amber-300/10" />
-                    <div className="absolute right-[31%] top-[31%] h-24 w-24 rounded-full border border-amber-200/20 bg-amber-300/10" />
-                    <div className="absolute bottom-[8%] left-4 rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[11px] text-cloud">
+                    <div className="absolute left-[18%] top-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
+                    <div className="absolute right-[18%] top-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
+                    <div className="absolute bottom-[18%] left-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
+                    <div className="absolute bottom-[18%] right-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
+                    <div className="absolute left-[31%] top-[31%] h-24 w-24 border border-amber-200/20 bg-amber-300/10" />
+                    <div className="absolute right-[31%] top-[31%] h-24 w-24 border border-amber-200/20 bg-amber-300/10" />
+                    <div className="absolute bottom-[8%] left-4 border border-white/10 bg-black/30 px-3 py-1 text-[11px] text-cloud">
                       Cyan: plume envelope
                     </div>
-                    <div className="absolute bottom-[8%] right-4 rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[11px] text-cloud">
+                    <div className="absolute bottom-[8%] right-4 border border-white/10 bg-black/30 px-3 py-1 text-[11px] text-cloud">
                       Amber: flagged overlap
                     </div>
                   </div>
@@ -152,7 +152,7 @@ export default function HomePage() {
                       {flaggedInteractions.map((item) => (
                         <div
                           key={item}
-                          className="rounded-xl border border-white/8 bg-black/15 px-3 py-3 text-sm leading-7 text-cloud"
+                          className="border border-white/8 bg-black/15 px-3 py-3 text-sm leading-7 text-cloud"
                         >
                           {item}
                         </div>
@@ -168,7 +168,7 @@ export default function HomePage() {
                       {tradeStudyRows.map((row) => (
                         <div
                           key={row.configuration}
-                          className="grid grid-cols-[1fr_auto] gap-3 rounded-xl border border-white/8 bg-black/15 px-3 py-3 text-sm"
+                          className="grid grid-cols-[1fr_auto] gap-3 border border-white/8 bg-black/15 px-3 py-3 text-sm"
                         >
                           <div>
                             <p className="font-medium text-white">
@@ -176,7 +176,7 @@ export default function HomePage() {
                             </p>
                             <p className="mt-1 text-muted">{row.risk}</p>
                           </div>
-                          <span className="self-start rounded-full border border-white/10 px-2.5 py-1 text-xs text-cloud">
+                          <span className="self-start border border-white/10 px-2.5 py-1 text-xs text-cloud">
                             {row.score}
                           </span>
                         </div>
@@ -238,7 +238,7 @@ export default function HomePage() {
                     key={item}
                     className={`${outerCardClass} flex items-start gap-3`}
                   >
-                    <span className="mt-2 h-2 w-2 rounded-full bg-cyan" />
+                    <span className="mt-2 h-2 w-2 bg-cyan" />
                     <p className="text-sm leading-7 text-cloud">{item}</p>
                   </div>
                 ))}
@@ -249,7 +249,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="rounded-[1.5rem] border border-white/8 bg-panel p-5 shadow-glow sm:p-6">
+            <div className="border border-white/8 bg-panel p-5 shadow-glow sm:p-6">
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan/75">
@@ -259,7 +259,7 @@ export default function HomePage() {
                     Typical Review Flow
                   </h3>
                 </div>
-                <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-cloud">
+                <span className="border border-white/10 px-3 py-1 text-xs text-cloud">
                   Early workflow
                 </span>
               </div>
@@ -343,7 +343,7 @@ export default function HomePage() {
 
       <section className="py-16 sm:py-20 lg:py-24">
         <Shell>
-          <div className="rounded-[1.5rem] border border-white/8 bg-panel px-5 py-8 shadow-glow sm:px-8 sm:py-10">
+          <div className="border border-white/8 bg-panel px-5 py-8 shadow-glow sm:px-8 sm:py-10">
             <div className="grid gap-8 lg:grid-cols-[0.84fr_1.16fr] lg:items-start">
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.32em] text-cyan/75">

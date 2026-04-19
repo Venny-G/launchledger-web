@@ -59,7 +59,7 @@ function toPointString(points: number[][]) {
 
 export function PressureTrendsFigure() {
   return (
-    <figure className="mx-auto w-full max-w-[66rem] rounded-[1.5rem] border border-white/8 bg-panel px-4 py-5 shadow-glow sm:px-6 sm:py-6">
+    <figure className="mx-auto w-full max-w-[66rem] border border-white/8 bg-panel px-4 py-5 shadow-glow sm:px-6 sm:py-6">
       <div className="space-y-4">
         <div className="space-y-2">
           <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cyan/75">
@@ -77,7 +77,7 @@ export function PressureTrendsFigure() {
           </p>
         </div>
 
-        <div className="overflow-hidden rounded-[1.25rem] border border-white/8 bg-slate">
+        <div className="overflow-hidden border border-white/8 bg-slate">
           <div className="h-[320px] w-full sm:h-[350px] lg:h-[390px]">
             <svg
               viewBox="0 0 796 360"
@@ -192,10 +192,10 @@ export function PressureTrendsFigure() {
           {trendSeries.map((series) => (
             <div
               key={series.label}
-              className="flex items-center gap-3 rounded-full border border-white/8 bg-black/10 px-3 py-2"
+              className="flex items-center gap-3 border border-white/8 bg-black/10 px-3 py-2"
             >
               <span
-                className="block h-[2px] w-8 shrink-0 rounded-full"
+                className="block h-[2px] w-8 shrink-0"
                 style={{
                   backgroundColor: series.color,
                   backgroundImage: series.dashArray

@@ -11,10 +11,10 @@ export function BrandMark({ compact = false }: BrandMarkProps) {
   return (
     <Link
       href="/"
-      className="group inline-flex items-center gap-3 rounded-full text-sm text-cloud transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan/70"
+      className="group inline-flex items-center gap-3 text-sm text-cloud transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan/70"
       aria-label={siteConfig.name}
     >
-      <span className="relative overflow-hidden rounded-2xl border border-white/8 bg-slate shadow-glow">
+      <span className="relative overflow-hidden border border-white/8 bg-slate shadow-glow">
         <Image
           src="/launchledger-logo.png"
           alt="LaunchLedger logo"
