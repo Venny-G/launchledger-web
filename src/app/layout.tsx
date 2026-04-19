@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, IBM_Plex_Sans, Space_Grotesk } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { SiteFooter } from "@/components/site-footer";
@@ -7,11 +7,6 @@ import { SiteHeader } from "@/components/site-header";
 import { siteConfig } from "@/lib/site";
 
 import "./globals.css";
-
-const display = Space_Grotesk({
-  variable: "--font-display",
-  subsets: ["latin"],
-});
 
 const body = IBM_Plex_Sans({
   variable: "--font-body",
@@ -28,21 +23,21 @@ const mono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "TypePiano Studio | Text Playback and MIDI Piano",
-    template: "%s | TypePiano Studio",
+    default: "LaunchLedger | Mission Planning Software for Emerging Space Teams",
+    template: "%s | LaunchLedger",
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: [
-    "typing simulator",
-    "text playback",
-    "midi player",
-    "virtual piano",
-    "browser piano",
-    "web audio",
+    "LaunchLedger",
+    "smallsat",
+    "CubeSat",
+    "mission planning",
+    "launch readiness",
+    "launch coordination",
   ],
   openGraph: {
-    title: "TypePiano Studio | Text Playback and MIDI Piano",
+    title: "LaunchLedger | Mission Planning Software for Emerging Space Teams",
     description: siteConfig.extendedDescription,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -51,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TypePiano Studio",
+    title: "LaunchLedger",
     description: siteConfig.description,
   },
 };
@@ -62,7 +57,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
+    <html lang="en" className={`${body.variable} ${mono.variable}`}>
       <body className="font-sans antialiased">
         <a
           href="#content"

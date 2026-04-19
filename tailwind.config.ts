@@ -5,37 +5,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#05070a",
-        slate: "#0b1016",
-        line: "rgba(123, 234, 255, 0.16)",
-        panel: "rgba(9, 14, 20, 0.78)",
-        cyan: "#7beaff",
-        cloud: "#d8edf2",
-        muted: "#8ea3ad",
-      },
-      backgroundImage: {
-        "grid-fade":
-          "linear-gradient(to right, rgba(123, 234, 255, 0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(123, 234, 255, 0.06) 1px, transparent 1px)",
+        ink: "#08111b",
+        slate: "#0f1724",
+        line: "rgba(119, 209, 255, 0.18)",
+        panel: "#0f1724",
+        cyan: "#77d1ff",
+        cloud: "#dce8ef",
+        muted: "#92a3b3",
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(123, 234, 255, 0.16), 0 24px 64px rgba(0, 0, 0, 0.32)",
+        glow: "0 0 0 1px rgba(119, 209, 255, 0.14), 0 20px 48px rgba(0, 0, 0, 0.26)",
       },
       maxWidth: {
         shell: "82rem",
-      },
-      animation: {
-        drift: "drift 14s ease-in-out infinite",
-        rise: "rise 0.8s ease forwards",
-      },
-      keyframes: {
-        drift: {
-          "0%, 100%": { transform: "translate3d(0, 0, 0)" },
-          "50%": { transform: "translate3d(0, -12px, 0)" },
-        },
-        rise: {
-          "0%": { opacity: "0", transform: "translate3d(0, 16px, 0)" },
-          "100%": { opacity: "1", transform: "translate3d(0, 0, 0)" },
-        },
       },
     },
   },
@@ -43,4 +25,3 @@ const config: Config = {
 };
 
 export default config;
-
