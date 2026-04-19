@@ -12,7 +12,7 @@ export function SiteHeader() {
             <BrandMark />
             <a
               href={`mailto:${siteConfig.contactEmail}?subject=LaunchLedger%20Early%20Access`}
-              className="inline-flex shrink-0 border border-cyan/25 bg-cyan/12 px-3 py-2 text-[11px] font-medium text-cyan transition hover:border-cyan/40 hover:bg-cyan/18 hover:text-white sm:px-4 sm:text-sm"
+              className="inline-flex shrink-0 border border-white bg-white px-3 py-2 text-[11px] font-medium text-ink transition hover:bg-white/90 sm:px-4 sm:text-sm"
             >
               Early Access
             </a>

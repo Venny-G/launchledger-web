@@ -9,7 +9,6 @@ const config: Config = {
         slate: "#111923",
         line: "rgba(255, 255, 255, 0.08)",
         panel: "#141d27",
-        cyan: "#91d5ff",
         cloud: "#dfe7ee",
         muted: "#99a8b5",
       },

@@ -11,7 +11,7 @@ export function BrandMark({ compact = false }: BrandMarkProps) {
   return (
     <Link
       href="/"
-      className="group inline-flex items-center gap-3 text-sm text-cloud transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan/70"
+      className="group inline-flex items-center gap-3 text-sm text-cloud transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
       aria-label={siteConfig.name}
     >
       <span className="relative overflow-hidden border border-white/8 bg-slate shadow-glow">
@@ -25,7 +25,7 @@ export function BrandMark({ compact = false }: BrandMarkProps) {
       </span>
       <span className="flex flex-col leading-none">
         <span
-          className={`font-mono uppercase text-cyan/75 ${
+          className={`font-mono uppercase text-white/55 ${
             compact
               ? "max-w-[13rem] text-[0.56rem] leading-[1.35] tracking-[0.18em]"
               : "hidden max-w-[16rem] text-[0.56rem] leading-[1.35] tracking-[0.18em] lg:block"

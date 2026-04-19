@@ -21,9 +21,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background:
-    radial-gradient(circle at top, rgba(145, 213, 255, 0.12), transparent 34%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 28%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 24%);
   pointer-events: none;
   z-index: -2;
 }
@@ -42,7 +40,7 @@ body::after {
 }
 
 ::selection {
-  background: rgba(145, 213, 255, 0.24);
+  background: rgba(255, 255, 255, 0.18);
   color: #ffffff;
 }
 

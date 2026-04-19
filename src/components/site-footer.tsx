@@ -14,13 +14,13 @@ export function SiteFooter() {
           </p>
           <a
             href={`mailto:${siteConfig.contactEmail}`}
-            className="inline-flex text-sm text-white underline decoration-cyan/35 underline-offset-4 transition hover:decoration-cyan"
+            className="inline-flex text-sm text-white underline decoration-white/35 underline-offset-4 transition hover:decoration-white"
           >
             {siteConfig.contactEmail}
           </a>
         </div>
         <div className="space-y-4">
-          <p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan/75">
+          <p className="font-mono text-xs uppercase tracking-[0.28em] text-white/55">
             Explore
           </p>
           <div className="flex flex-col gap-2 text-sm text-muted">

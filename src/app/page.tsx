@@ -1,4 +1,5 @@
 import { CtaBanner } from "@/components/cta-banner";
+import { ImagePlaceholder } from "@/components/image-placeholder";
 import { PressureTrendsFigure } from "@/components/pressure-trends-figure";
 import { SectionHeading } from "@/components/section-heading";
 import { Shell } from "@/components/shell";
@@ -23,6 +24,19 @@ const comparisonRows = [
   { configuration: "Layout A", outcome: "High overlap", action: "Review" },
   { configuration: "Layout B", outcome: "Preferred", action: "Keep" },
   { configuration: "Layout C", outcome: "Thermal concern", action: "Review" },
+];
+
+const credibilitySlots = [
+  {
+    title: "Cluster geometry trade study",
+    description:
+      "Compare spacing, cant angle, and keep-out margins across candidate propulsion layouts.",
+  },
+  {
+    title: "Thermal and EMI risk map",
+    description:
+      "Show sensitive avionics and power electronics zones relative to clustered thruster placement.",
+  },
 ];
 
 const workflowModules = [
@@ -54,7 +68,7 @@ export default function HomePage() {
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_31rem] lg:items-center xl:grid-cols-[minmax(0,1fr)_34rem] xl:gap-14">
             <div className="max-w-3xl space-y-6">
               <div className="space-y-4">
-                <p className="font-mono text-xs uppercase tracking-[0.32em] text-cyan/75">
+                <p className="font-mono text-xs uppercase tracking-[0.32em] text-white/55">
                   LaunchLedger
                 </p>
                 <h1 className="max-w-4xl font-display text-4xl tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -69,13 +83,13 @@ export default function HomePage() {
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
                   href={`mailto:${siteConfig.contactEmail}?subject=LaunchLedger%20Early%20Access`}
-                  className="inline-flex w-full items-center justify-center border border-cyan bg-cyan px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white sm:w-auto"
+                  className="inline-flex w-full items-center justify-center border border-white bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white/90 sm:w-auto"
                 >
                   Request Early Access
                 </a>
                 <a
                   href={`mailto:${siteConfig.contactEmail}?subject=LaunchLedger%20Founder%20Conversation`}
-                  className="inline-flex w-full items-center justify-center border border-white/10 px-5 py-3 text-sm font-semibold text-cloud transition hover:border-cyan/30 hover:text-white sm:w-auto"
+                  className="inline-flex w-full items-center justify-center border border-white/12 px-5 py-3 text-sm font-semibold text-cloud transition hover:border-white/28 hover:text-white sm:w-auto"
                 >
                   Contact Founder
                 </a>
@@ -89,7 +103,7 @@ export default function HomePage() {
             <div className="border border-white/8 bg-panel p-4 shadow-glow sm:p-5 lg:p-6">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan/75">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-white/55">
                     Example Assessment
                   </p>
                   <h2 className="mt-3 text-xl font-semibold tracking-tight text-white">
@@ -97,7 +111,7 @@ export default function HomePage() {
                   </h2>
                 </div>
                 <span className="border border-white/10 px-3 py-1 text-xs font-medium text-cloud">
-                  Demonstration
+                  Image slot
                 </span>
               </div>
 
@@ -107,7 +121,7 @@ export default function HomePage() {
                     key={item.label}
                     className="bg-slate px-4 py-3"
                   >
-                    <dt className="font-mono text-[11px] uppercase tracking-[0.22em] text-cyan/75">
+                    <dt className="font-mono text-[11px] uppercase tracking-[0.22em] text-white/55">
                       {item.label}
                     </dt>
                     <dd className="mt-1.5 text-sm font-medium text-white">
@@ -118,25 +132,16 @@ export default function HomePage() {
               </dl>
 
               <div className="mt-5 grid gap-4">
-                <div className={innerCardClass}>
-                  <div className="relative h-56 overflow-hidden border border-white/8 bg-[#0d131a] sm:h-64">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(145,213,255,0.06),transparent_60%)]" />
-                    <div className="absolute left-[18%] top-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
-                    <div className="absolute right-[18%] top-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
-                    <div className="absolute bottom-[18%] left-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
-                    <div className="absolute bottom-[18%] right-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
-                    <div className="absolute left-[31%] top-[31%] h-24 w-24 border border-amber-200/20 bg-amber-300/10" />
-                    <div className="absolute right-[31%] top-[31%] h-24 w-24 border border-amber-200/20 bg-amber-300/10" />
-                  </div>
-                  <p className="mt-3 text-xs leading-6 text-muted">
-                    Cyan indicates plume envelope. Amber marks overlap pressure
-                    near centerline.
-                  </p>
-                </div>
+                <ImagePlaceholder
+                  title="Plume overlap map"
+                  description="Four-thruster Hall cluster plume envelope or particle-density view showing overlap pressure near the centerline and aft-surface exposure zones."
+                  note="Use a real analysis image, simulation output, or annotated plume overlay."
+                  frameClassName="min-h-[18rem]"
+                />
 
                 <div className="grid gap-4 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
                   <div className={innerCardClass}>
-                    <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
+                    <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-white/55">
                       Recommendation
                     </p>
                     <p className="mt-3 text-sm leading-6 text-cloud">
@@ -145,7 +150,7 @@ export default function HomePage() {
                   </div>
 
                   <div className={innerCardClass}>
-                    <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
+                    <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-white/55">
                       Comparison
                     </p>
                     <div className="mt-3 divide-y divide-white/8 border border-white/8 bg-black/15">
@@ -216,11 +221,8 @@ export default function HomePage() {
               />
               <div className="space-y-4">
                 {supportAreas.map((item) => (
-                  <div
-                    key={item}
-                    className={`${outerCardClass} flex items-start gap-3`}
-                  >
-                    <span className="mt-2 h-2 w-2 bg-cyan" />
+                  <div key={item} className={`${outerCardClass} flex items-start gap-3`}>
+                    <span className="mt-2 h-2 w-2 bg-white/60" />
                     <p className="text-sm leading-7 text-cloud">{item}</p>
                   </div>
                 ))}
@@ -234,7 +236,7 @@ export default function HomePage() {
             <div className="border border-white/8 bg-panel p-5 shadow-glow sm:p-6">
               <div className="flex items-center justify-between gap-3">
                 <div>
-                  <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan/75">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-white/55">
                     Typical Review Process
                   </p>
                   <h3 className="mt-3 text-xl font-semibold text-white">
@@ -252,7 +254,7 @@ export default function HomePage() {
                     key={module.title}
                     className={innerCardClass}
                   >
-                    <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
+                    <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-white/55">
                       0{index + 1}
                     </p>
                     <h4 className="mt-2 text-base font-semibold text-white">
@@ -290,6 +292,17 @@ export default function HomePage() {
                     {capability.body}
                   </p>
                 </article>
+              ))}
+            </div>
+            <div className="grid gap-4 lg:grid-cols-2">
+              {credibilitySlots.map((slot) => (
+                <ImagePlaceholder
+                  key={slot.title}
+                  title={slot.title}
+                  description={slot.description}
+                  note="Leave this slot for a real chart, analysis output, or annotated engineering image."
+                  frameClassName="min-h-[15rem]"
+                />
               ))}
             </div>
           </div>
