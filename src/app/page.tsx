@@ -11,10 +11,10 @@ import {
 } from "@/lib/site";
 
 const heroStats = [
-  { label: "Study case", value: "4-thruster Hall cluster" },
+  { label: "Reference case", value: "4-thruster Hall cluster" },
   { label: "Spacing range", value: "220 to 320 mm" },
-  { label: "Main flag", value: "Plume overlap" },
-  { label: "Stage", value: "Pre-integration" },
+  { label: "Primary risk", value: "Plume overlap" },
+  { label: "Review stage", value: "Pre-integration" },
 ];
 
 const flaggedInteractions = [
@@ -56,7 +56,7 @@ export default function HomePage() {
       <section className="py-16 sm:py-20 lg:py-24">
         <Shell>
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_31rem] lg:items-center xl:grid-cols-[minmax(0,1fr)_34rem] xl:gap-14">
-            <div className="max-w-3xl space-y-7">
+            <div className="max-w-3xl space-y-6">
               <div className="space-y-4">
                 <p className="font-mono text-xs uppercase tracking-[0.32em] text-cyan/75">
                   LaunchLedger
@@ -90,22 +90,22 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="border border-white/8 bg-panel p-5 shadow-glow sm:p-6">
+            <div className="border border-white/8 bg-panel p-4 shadow-glow sm:p-5 lg:p-6">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan/75">
                     Review snapshot
                   </p>
                   <h2 className="mt-3 text-xl font-semibold tracking-tight text-white">
-                    Four-thruster layout check
+                    Four-thruster review
                   </h2>
                 </div>
                 <span className="border border-white/10 px-3 py-1 text-xs font-medium text-cloud">
-                  Illustrative
+                  Example
                 </span>
               </div>
 
-              <div className="mt-6 grid gap-3 md:grid-cols-2">
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 {heroStats.map((item) => (
                   <div
                     key={item.label}
@@ -126,7 +126,7 @@ export default function HomePage() {
                   <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
                     Plume overlap map
                   </p>
-                  <div className="relative mt-4 h-56 overflow-hidden border border-white/8 bg-[#0d131a]">
+                  <div className="relative mt-4 h-48 overflow-hidden border border-white/8 bg-[#0d131a] sm:h-56">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(145,213,255,0.06),transparent_60%)]" />
                     <div className="absolute left-[18%] top-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
                     <div className="absolute right-[18%] top-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
@@ -134,10 +134,12 @@ export default function HomePage() {
                     <div className="absolute bottom-[18%] right-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
                     <div className="absolute left-[31%] top-[31%] h-24 w-24 border border-amber-200/20 bg-amber-300/10" />
                     <div className="absolute right-[31%] top-[31%] h-24 w-24 border border-amber-200/20 bg-amber-300/10" />
-                    <div className="absolute bottom-[8%] left-4 border border-white/10 bg-black/30 px-3 py-1 text-[11px] text-cloud">
+                  </div>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <div className="border border-white/10 bg-black/20 px-3 py-1 text-[11px] text-cloud">
                       Cyan: plume envelope
                     </div>
-                    <div className="absolute bottom-[8%] right-4 border border-white/10 bg-black/30 px-3 py-1 text-[11px] text-cloud">
+                    <div className="border border-white/10 bg-black/20 px-3 py-1 text-[11px] text-cloud">
                       Amber: flagged overlap
                     </div>
                   </div>
@@ -148,11 +150,11 @@ export default function HomePage() {
                     <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
                       Review notes
                     </p>
-                    <div className="mt-4 space-y-3">
+                    <div className="mt-4 space-y-2.5">
                       {flaggedInteractions.map((item) => (
                         <div
                           key={item}
-                          className="border border-white/8 bg-black/15 px-3 py-3 text-sm leading-7 text-cloud"
+                          className="border border-white/8 bg-black/15 px-3 py-3 text-sm leading-6 text-cloud"
                         >
                           {item}
                         </div>
@@ -194,7 +196,7 @@ export default function HomePage() {
         <Shell>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
             <SectionHeading
-              eyebrow="The problem"
+              eyebrow="Problem"
               title="Clustered propulsion creates interactions that are expensive to discover late."
               description="As spacecraft power levels rise, multiple thrusters are increasingly used in close proximity. That introduces plume, thermal, EMI, and packaging constraints that are hard to assess early."
             />
@@ -228,7 +230,7 @@ export default function HomePage() {
           <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
             <div className="space-y-8">
               <SectionHeading
-                eyebrow="What LaunchLedger does"
+                eyebrow="What It Does"
                 title="Evaluate clustered propulsion layouts before integration is locked."
                 description="LaunchLedger helps engineering teams compare propulsion configurations earlier, when layout changes are still practical."
               />
@@ -253,25 +255,25 @@ export default function HomePage() {
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan/75">
-                    Typical review flow
+                    Review flow
                   </p>
                   <h3 className="mt-3 text-xl font-semibold text-white">
-                    Typical Review Flow
+                    How a review starts
                   </h3>
                 </div>
                 <span className="border border-white/10 px-3 py-1 text-xs text-cloud">
-                  Early workflow
+                  Early stage
                 </span>
               </div>
 
               <div className="mt-6 space-y-4">
-                {workflowModules.map((module) => (
+                {workflowModules.map((module, index) => (
                   <article
                     key={module.title}
                     className={innerCardClass}
                   >
                     <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
-                      Step
+                      0{index + 1}
                     </p>
                     <h4 className="mt-2 text-base font-semibold text-white">
                       {module.title}
@@ -291,8 +293,8 @@ export default function HomePage() {
         <Shell>
           <div className="space-y-10">
             <SectionHeading
-              eyebrow="Core capabilities"
-              title="Tools built for real clustered propulsion design decisions."
+              eyebrow="Capabilities"
+              title="Tools for real clustered propulsion design decisions."
               description="Inspect plume overlap, clearances, and layout conflicts while changes are still manageable."
             />
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -318,9 +320,9 @@ export default function HomePage() {
         <Shell>
           <div className="space-y-10">
             <SectionHeading
-              eyebrow="Who it's for"
-              title="Who it's for"
-              description="For teams making propulsion layout decisions early."
+              eyebrow="Who It Serves"
+              title="Teams making propulsion layout decisions early."
+              description="Satellite developers, propulsion teams, and research groups reviewing clustered layouts before hardware is fixed."
             />
             <div className="grid gap-4 lg:grid-cols-3">
               {audience.map((item) => (

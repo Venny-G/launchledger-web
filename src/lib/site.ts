@@ -8,19 +8,14 @@ export const siteConfig = {
   url: "https://launchledger.app",
   nav: [
     { href: "#problem", label: "Problem" },
-    { href: "#platform", label: "Platform" },
+    { href: "#platform", label: "What It Does" },
     { href: "#capabilities", label: "Capabilities" },
-    { href: "#users", label: "Who It's For" },
+    { href: "#users", label: "Who It Serves" },
     { href: "#contact", label: "Contact" },
   ],
   contactEmail: "inquiry@launchledger.app",
   socialLabel:
     "Clustered electric propulsion software for plume interaction, spacing, and integration review.",
-  founder: {
-    name: "Venkataashish Gogineni",
-    title:
-      "Aerospace researcher focused on electric propulsion, clustered Hall-effect thrusters, and spacecraft systems modeling",
-  },
 };
 
 export const problemPoints = [

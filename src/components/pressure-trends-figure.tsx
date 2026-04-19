@@ -59,11 +59,11 @@ function toPointString(points: number[][]) {
 
 export function PressureTrendsFigure() {
   return (
-    <figure className="mx-auto w-full max-w-[66rem] border border-white/8 bg-panel px-4 py-5 shadow-glow sm:px-6 sm:py-6">
+    <figure className="mx-auto w-full max-w-[66rem] border border-white/8 bg-panel px-4 py-5 shadow-glow sm:px-6 sm:py-6 lg:px-8">
       <div className="space-y-4">
         <div className="space-y-2">
           <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cyan/75">
-            Directional trend view
+            Trend view
           </p>
           <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
             Why This Matters Through 2040
@@ -77,11 +77,11 @@ export function PressureTrendsFigure() {
           </p>
         </div>
 
-        <div className="overflow-hidden border border-white/8 bg-slate">
-          <div className="h-[320px] w-full sm:h-[350px] lg:h-[390px]">
-            <svg
-              viewBox="0 0 796 360"
-              className="h-full w-full"
+          <div className="overflow-hidden border border-white/8 bg-slate">
+            <div className="h-[280px] w-full sm:h-[330px] lg:h-[390px]">
+              <svg
+                viewBox="0 0 796 360"
+                className="h-full w-full"
               role="img"
               aria-labelledby="pressure-trends-title pressure-trends-desc"
             >
@@ -185,10 +185,10 @@ export function PressureTrendsFigure() {
                 DIRECTIONAL TREND VIEW
               </text>
             </svg>
+            </div>
           </div>
-        </div>
 
-        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-2.5 sm:grid-cols-2 xl:grid-cols-4">
           {trendSeries.map((series) => (
             <div
               key={series.label}

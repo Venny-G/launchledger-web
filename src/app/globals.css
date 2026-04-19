@@ -63,12 +63,12 @@ body::after {
 }
 
 main section {
-  scroll-margin-top: 8rem;
+  scroll-margin-top: 9.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   main section {
-    scroll-margin-top: 5.75rem;
+    scroll-margin-top: 6.5rem;
   }
 }
 
