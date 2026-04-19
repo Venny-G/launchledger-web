@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import { IBM_Plex_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { SiteFooter } from "@/components/site-footer";
@@ -14,30 +14,24 @@ const body = IBM_Plex_Sans({
   weight: ["400", "500", "600"],
 });
 
-const mono = IBM_Plex_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "LaunchLedger | Mission Planning Software for Emerging Space Teams",
+    default: "LaunchLedger | Software for Clustered Electric Propulsion Systems",
     template: "%s | LaunchLedger",
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: [
     "LaunchLedger",
-    "smallsat",
-    "CubeSat",
-    "mission planning",
-    "launch readiness",
-    "launch coordination",
+    "clustered electric propulsion",
+    "Hall-effect thrusters",
+    "plume interaction",
+    "thruster spacing",
+    "spacecraft integration",
   ],
   openGraph: {
-    title: "LaunchLedger | Mission Planning Software for Emerging Space Teams",
+    title: "LaunchLedger | Software for Clustered Electric Propulsion Systems",
     description: siteConfig.extendedDescription,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -57,7 +51,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${body.variable} ${mono.variable}`}>
+    <html lang="en" className={body.variable}>
       <body className="font-sans antialiased">
         <a
           href="#content"

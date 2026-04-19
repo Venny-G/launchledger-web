@@ -12,25 +12,37 @@ html {
 
 body {
   min-height: 100vh;
-  background: #08111b;
-  color: #f8fcff;
+  background: #0b1016;
+  color: #edf3f7;
+  line-height: 1.6;
 }
 
 body::before {
   content: "";
   position: fixed;
   inset: 0;
+  background:
+    radial-gradient(circle at top, rgba(145, 213, 255, 0.12), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 28%);
+  pointer-events: none;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
   background-image:
-    linear-gradient(to right, rgba(119, 209, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(119, 209, 255, 0.06) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
   background-size: 96px 96px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), transparent 82%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent 82%);
   pointer-events: none;
   z-index: -1;
 }
 
 ::selection {
-  background: rgba(119, 209, 255, 0.24);
+  background: rgba(145, 213, 255, 0.24);
   color: #ffffff;
 }
 
@@ -43,24 +55,15 @@ body::before {
 }
 
 .font-mono {
-  font-family: var(--font-mono), monospace;
+  font-family: var(--font-body), sans-serif;
 }
 
 .page-lines {
   position: relative;
 }
 
-.page-lines::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(8, 17, 27, 0),
-    rgba(8, 17, 27, 0.28) 26%,
-    rgba(8, 17, 27, 0.56) 100%
-  );
-  pointer-events: none;
+main section {
+  scroll-margin-top: 5.5rem;
 }
 
 summary::-webkit-details-marker {

@@ -5,19 +5,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#08111b",
-        slate: "#0f1724",
-        line: "rgba(119, 209, 255, 0.18)",
-        panel: "#0f1724",
-        cyan: "#77d1ff",
-        cloud: "#dce8ef",
-        muted: "#92a3b3",
+        ink: "#0b1016",
+        slate: "#111923",
+        line: "rgba(255, 255, 255, 0.08)",
+        panel: "#141d27",
+        cyan: "#91d5ff",
+        cloud: "#dfe7ee",
+        muted: "#99a8b5",
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(119, 209, 255, 0.14), 0 20px 48px rgba(0, 0, 0, 0.26)",
+        glow: "0 0 0 1px rgba(255, 255, 255, 0.04), 0 18px 42px rgba(0, 0, 0, 0.22)",
       },
       maxWidth: {
-        shell: "82rem",
+        shell: "78rem",
       },
     },
   },

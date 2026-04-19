@@ -2,120 +2,92 @@ export const siteConfig = {
   name: "LaunchLedger",
   legalName: "LaunchLedger SpaceWorks",
   description:
-    "LaunchLedger helps CubeSat, university satellite, and early smallsat teams manage mission planning, launch readiness, and operational coordination in one place.",
+    "Software for clustered electric propulsion systems. Model plume interactions, spacing constraints, and integration risk before hardware testing begins.",
   extendedDescription:
-    "Mission planning software for emerging space teams. Track launch readiness, timelines, constraints, and mission risk in one place.",
+    "LaunchLedger helps spacecraft teams analyze clustered electric propulsion configurations before hardware testing, with a focus on plume interaction, spacing, interference, and system-level integration risk.",
   url: "https://launchledger.app",
   nav: [
     { href: "#problem", label: "Problem" },
-    { href: "#solution", label: "Solution" },
-    { href: "#preview", label: "Product Preview" },
+    { href: "#platform", label: "Platform" },
+    { href: "#capabilities", label: "Capabilities" },
+    { href: "#users", label: "Who It's For" },
     { href: "#contact", label: "Contact" },
   ],
   contactEmail: "inquiry@launchledger.app",
   socialLabel:
-    "Private development is ongoing. Early access conversations are open for teams with active mission-planning needs.",
+    "Clustered electric propulsion software for plume interaction, spacing, and integration risk analysis.",
   founder: {
     name: "Venkataashish Gogineni",
-    title: "Aerospace student and propulsion researcher",
+    title:
+      "Aerospace researcher focused on electric propulsion, clustered Hall-effect thrusters, and spacecraft systems modeling",
   },
 };
 
-export const audience = [
-  {
-    title: "CubeSat teams",
-    body: "Teams preparing for launch that need one place to track requirements, milestones, and open issues.",
-  },
-  {
-    title: "University programs",
-    body: "Student-led satellite groups that need cleaner coordination across technical leads, documentation, and schedule changes.",
-  },
-  {
-    title: "Early-stage smallsat startups",
-    body: "Small teams building their first missions and trying to avoid planning drift across spreadsheets, docs, and inbox threads.",
-  },
-];
-
 export const problemPoints = [
   {
-    title: "Launch constraints",
-    body: "Rideshare rules, provider assumptions, and payload limits change quickly and rarely live in one clean record.",
+    title: "Plume-plume interactions",
+    body: "Adjacent thrusters can change plume shape, overlap, and downstream behavior in ways that are hard to estimate with spreadsheets alone.",
   },
   {
-    title: "Readiness tracking",
-    body: "Teams need a way to see what is ready, what is blocked, and what still depends on outside inputs.",
+    title: "Efficiency losses",
+    body: "Cluster effects can reduce expected performance and complicate how propulsion systems behave at the full-vehicle level.",
   },
   {
-    title: "Documentation gaps",
-    body: "Requirements, integration notes, and launch documents often end up split across folders, chats, and email chains.",
+    title: "Spacing tradeoffs",
+    body: "Layout decisions are constrained by packaging, structure, thermal margins, and how close thrusters can operate without unwanted interaction.",
   },
   {
-    title: "Schedule risk",
-    body: "When dates move, early teams can lose sight of which milestones, approvals, or decisions need to move with them.",
-  },
-];
-
-export const solutionPoints = [
-  {
-    title: "Track launch paths",
-    body: "Keep provider options, rideshare limits, and mission assumptions in one planning view.",
+    title: "Thermal coupling",
+    body: "Hot spots and local heating can appear when multiple thrusters operate near shared surfaces and nearby hardware.",
   },
   {
-    title: "Organize milestones",
-    body: "Map dependencies, deadlines, and handoffs so teams know what needs to happen next.",
+    title: "Electromagnetic interference",
+    body: "Closer layouts can create EMI concerns that affect avionics, power-processing placement, and system integration decisions.",
   },
   {
-    title: "Monitor readiness",
-    body: "Keep documents, integration tasks, and review status tied to the mission timeline.",
-  },
-  {
-    title: "Surface risk early",
-    body: "Highlight blockers, schedule pressure, and coordination gaps before they turn into missed dates.",
+    title: "Integration risk",
+    body: "These interactions often stay hidden until late review or hardware test, when fixes are slower and more expensive.",
   },
 ];
 
-export const featureCards = [
+export const supportAreas = [
+  "Thruster spacing analysis",
+  "Plume interaction visualization",
+  "Performance penalty estimation",
+  "Thermal and electromagnetic coupling review",
+  "Architecture-level trade studies",
+];
+
+export const capabilityCards = [
   {
-    title: "Mission timelines",
-    body: "Track milestones, dependencies, and key decision points.",
+    title: "Cluster geometry analysis",
+    body: "Evaluate how thruster spacing and layout affect system behavior.",
   },
   {
-    title: "Launch readiness",
-    body: "Keep requirements, documents, and integration tasks visible.",
+    title: "Plume interaction modeling",
+    body: "Visualize overlap, divergence, and interference across clustered configurations.",
   },
   {
-    title: "Constraint tracking",
-    body: "Organize launch, payload, and rideshare limitations in one place.",
+    title: "Integration risk screening",
+    body: "Identify where propulsion layout choices may create thermal or electromagnetic concerns.",
   },
   {
-    title: "Risk visibility",
-    body: "Surface schedule pressure and operational gaps before they become failures.",
+    title: "Trade study support",
+    body: "Compare candidate configurations before committing to test campaigns or hardware changes.",
   },
 ];
 
-export const productPreview = [
+export const audience = [
   {
-    title: "Mission Overview",
-    body: "Top-level mission state, launch path, target window, and open blockers.",
+    title: "Satellite manufacturers",
+    body: "Teams developing spacecraft that depend on clustered electric propulsion at higher power levels.",
   },
   {
-    title: "Launch Window Tracker",
-    body: "Current launch options, provider notes, and rideshare constraints.",
+    title: "Propulsion companies",
+    body: "Organizations exploring multi-thruster architectures and early configuration tradeoffs.",
   },
   {
-    title: "Requirements Checklist",
-    body: "Payload requirements, integration actions, and documentation status.",
-  },
-  {
-    title: "Documentation Status",
-    body: "What has been submitted, what is waiting on review, and what is still missing.",
-  },
-  {
-    title: "Risks & Blockers",
-    body: "A short list of issues that could move the schedule or change readiness.",
-  },
-  {
-    title: "Timeline / Milestones",
-    body: "Upcoming reviews, key deadlines, and mission decision points.",
+    title: "Research labs and advanced concept teams",
+    body: "Groups studying electric propulsion interactions, scalability, and system integration.",
   },
 ];

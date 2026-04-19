@@ -10,8 +10,8 @@ export function SiteFooter() {
         <div className="space-y-4">
           <BrandMark compact />
           <p className="max-w-xl text-sm leading-7 text-muted">
-            Mission planning software for CubeSat teams, university missions,
-            and early smallsat operators.
+            Software for clustered electric propulsion systems, focused on
+            plume interaction, spacing constraints, and integration risk.
           </p>
           <a
             href={`mailto:${siteConfig.contactEmail}`}
@@ -21,7 +21,7 @@ export function SiteFooter() {
           </a>
         </div>
         <div className="space-y-4">
-          <p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan/70">
+          <p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan/75">
             Explore
           </p>
           <div className="flex flex-col gap-2 text-sm text-muted">
