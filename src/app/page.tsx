@@ -341,34 +341,6 @@ export default function HomePage() {
         </Shell>
       </section>
 
-      <section className="py-16 sm:py-20 lg:py-24">
-        <Shell>
-          <div className="border border-white/8 bg-panel px-5 py-8 shadow-glow sm:px-8 sm:py-10">
-            <div className="grid gap-8 lg:grid-cols-[0.84fr_1.16fr] lg:items-start">
-              <div>
-                <p className="font-mono text-xs uppercase tracking-[0.32em] text-cyan/75">
-                  Founder
-                </p>
-                <h2 className="mt-4 font-display text-3xl tracking-tight text-white sm:text-4xl">
-                  Built by {siteConfig.founder.name}
-                </h2>
-              </div>
-
-              <div className="space-y-5">
-                <p className="max-w-2xl text-sm leading-7 text-cloud sm:text-base">
-                  {siteConfig.founder.title}.
-                </p>
-                <p className="max-w-2xl text-sm leading-7 text-muted sm:text-base">
-                  LaunchLedger began as independent research into clustered Hall
-                  thruster plume interactions and the lack of practical
-                  early-stage design tools.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Shell>
-      </section>
-
       <CtaBanner
         title="Interested in early access?"
         body="If you're working on clustered propulsion, spacecraft integration, or related design challenges, reach out."
