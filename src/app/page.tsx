@@ -1,4 +1,5 @@
 import { CtaBanner } from "@/components/cta-banner";
+import { PressureTrendsFigure } from "@/components/pressure-trends-figure";
 import { SectionHeading } from "@/components/section-heading";
 import { Shell } from "@/components/shell";
 import {
@@ -213,6 +214,12 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+        </Shell>
+      </section>
+
+      <section className="py-20 sm:py-24">
+        <Shell>
+          <PressureTrendsFigure />
         </Shell>
       </section>
 
