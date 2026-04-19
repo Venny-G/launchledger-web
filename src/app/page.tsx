@@ -11,16 +11,16 @@ import {
 } from "@/lib/site";
 
 const heroStats = [
-  { label: "Reference study", value: "4-thruster Hall cluster" },
-  { label: "Spacing sweep", value: "220 to 320 mm" },
-  { label: "Primary concern", value: "Plume overlap" },
-  { label: "Review stage", value: "Architecture screen" },
+  { label: "Study case", value: "4-thruster Hall cluster" },
+  { label: "Spacing range", value: "220 to 320 mm" },
+  { label: "Main flag", value: "Plume overlap" },
+  { label: "Stage", value: "Pre-integration" },
 ];
 
 const flaggedInteractions = [
-  "Outer plume overlap rises sharply below 240 mm spacing.",
-  "Centerline thermal loading increases in the aft deck region.",
-  "Power-processing placement needs EMI review near the port pair.",
+  "Outer plumes begin overlapping below 240 mm spacing.",
+  "Aft-surface exposure rises near the centerline.",
+  "Power electronics zone needs wider EMI clearance.",
 ];
 
 const tradeStudyRows = [
@@ -31,33 +31,33 @@ const tradeStudyRows = [
 
 const workflowModules = [
   {
-    title: "Cluster geometry analysis",
-    body: "Capture thruster layout, cant angles, and spacing constraints in one study.",
+    title: "Cluster geometry",
+    body: "Define spacing, cant angles, and mounting constraints.",
   },
   {
-    title: "Interaction review",
-    body: "Inspect plume overlap, likely interference zones, and system-level coupling concerns.",
+    title: "Interaction screen",
+    body: "Inspect plume overlap and aft-surface exposure.",
   },
   {
-    title: "Trade study support",
-    body: "Compare candidate layouts before committing to hardware changes or test campaigns.",
+    title: "Compare options",
+    body: "Review spacing, cant angle, and layout options before hardware is fixed.",
   },
 ];
 
-const focusAreas = [
-  "Clustered Hall-effect thrusters",
-  "Plume interaction analysis",
-  "Spacecraft systems modeling",
-];
+const outerCardClass =
+  "h-full rounded-[1.5rem] border border-white/8 bg-panel px-5 py-5 transition-colors duration-200 hover:border-white/14 hover:bg-[#17212c]";
+
+const innerCardClass =
+  "h-full rounded-[1.35rem] border border-white/8 bg-slate px-4 py-4 transition-colors duration-200 hover:border-white/14 hover:bg-[#182330]";
 
 export default function HomePage() {
   return (
     <>
-      <section className="py-20 sm:py-24 lg:py-28">
+      <section className="py-16 sm:py-20 lg:py-24">
         <Shell>
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_32rem] lg:items-center xl:grid-cols-[minmax(0,1fr)_35rem]">
-            <div className="max-w-3xl space-y-8">
-              <div className="space-y-5">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_31rem] lg:items-center xl:grid-cols-[minmax(0,1fr)_34rem] xl:gap-14">
+            <div className="max-w-3xl space-y-7">
+              <div className="space-y-4">
                 <p className="font-mono text-xs uppercase tracking-[0.32em] text-cyan/75">
                   LaunchLedger
                 </p>
@@ -65,51 +65,51 @@ export default function HomePage() {
                   Software for clustered electric propulsion systems
                 </h1>
                 <p className="max-w-2xl text-lg leading-8 text-cloud sm:text-xl">
-                  Model plume interactions, spacing constraints, and
-                  integration risk before hardware testing begins.
-                </p>
-                <p className="max-w-2xl text-base leading-8 text-muted">
-                  Built for spacecraft teams working with multi-thruster
-                  electric propulsion architectures.
+                  Study plume interactions, spacing limits, and integration
+                  risk before hardware testing begins.
                 </p>
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
                   href={`mailto:${siteConfig.contactEmail}?subject=LaunchLedger%20Early%20Access`}
-                  className="inline-flex items-center justify-center rounded-full bg-cyan px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white"
+                  className="inline-flex w-full items-center justify-center rounded-full bg-cyan px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white sm:w-auto"
                 >
                   Request Early Access
                 </a>
                 <a
                   href={`mailto:${siteConfig.contactEmail}?subject=LaunchLedger%20Founder%20Conversation`}
-                  className="inline-flex items-center justify-center rounded-full border border-white/10 px-5 py-3 text-sm font-semibold text-cloud transition hover:border-cyan/30 hover:text-white"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-white/10 px-5 py-3 text-sm font-semibold text-cloud transition hover:border-cyan/30 hover:text-white sm:w-auto"
                 >
                   Contact Founder
                 </a>
               </div>
+              <p className="max-w-2xl text-sm leading-7 text-muted">
+                Built for spacecraft teams evaluating multi-thruster propulsion
+                layouts.
+              </p>
             </div>
 
-            <div className="rounded-[1.75rem] border border-white/8 bg-panel p-5 shadow-glow sm:p-6">
+            <div className="rounded-[1.5rem] border border-white/8 bg-panel p-5 shadow-glow sm:p-6">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan/75">
-                    Analysis snapshot
+                    Review snapshot
                   </p>
                   <h2 className="mt-3 text-xl font-semibold tracking-tight text-white">
-                    Cluster configuration review
+                    Four-thruster layout check
                   </h2>
                 </div>
                 <span className="rounded-full border border-white/10 px-3 py-1 text-xs font-medium text-cloud">
-                  Representative view
+                  Illustrative
                 </span>
               </div>
 
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <div className="mt-6 grid gap-3 md:grid-cols-2">
                 {heroStats.map((item) => (
                   <div
                     key={item.label}
-                    className="rounded-[1.15rem] border border-white/8 bg-slate px-4 py-4"
+                    className={innerCardClass}
                   >
                     <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
                       {item.label}
@@ -122,9 +122,9 @@ export default function HomePage() {
               </div>
 
               <div className="mt-5 grid gap-4 xl:grid-cols-[1.05fr_0.95fr]">
-                <div className="rounded-[1.25rem] border border-white/8 bg-slate px-4 py-4">
+                <div className={innerCardClass}>
                   <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
-                    Interaction map
+                    Plume overlap map
                   </p>
                   <div className="relative mt-4 h-56 overflow-hidden rounded-[1.15rem] border border-white/8 bg-[#0d131a]">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(145,213,255,0.06),transparent_60%)]" />
@@ -144,9 +144,9 @@ export default function HomePage() {
                 </div>
 
                 <div className="space-y-4">
-                  <div className="rounded-[1.25rem] border border-white/8 bg-slate px-4 py-4">
+                  <div className={innerCardClass}>
                     <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
-                      Flagged interactions
+                      Review notes
                     </p>
                     <div className="mt-4 space-y-3">
                       {flaggedInteractions.map((item) => (
@@ -160,9 +160,9 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="rounded-[1.25rem] border border-white/8 bg-slate px-4 py-4">
+                  <div className={innerCardClass}>
                     <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
-                      Trade study
+                      Layout comparison
                     </p>
                     <div className="mt-4 space-y-3">
                       {tradeStudyRows.map((row) => (
@@ -190,19 +190,19 @@ export default function HomePage() {
         </Shell>
       </section>
 
-      <section id="problem" className="border-y border-white/6 py-20 sm:py-24">
+      <section id="problem" className="border-y border-white/6 py-16 sm:py-20 lg:py-24">
         <Shell>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
             <SectionHeading
               eyebrow="The problem"
-              title="Clustered electric propulsion introduces design interactions that are hard to evaluate early."
-              description="As electric propulsion systems scale, spacecraft increasingly rely on multiple thrusters operating in close proximity. These effects are difficult to evaluate early, and physical testing is expensive, slow, and limited in scope."
+              title="Clustered propulsion creates interactions that are expensive to discover late."
+              description="As spacecraft power levels rise, multiple thrusters are increasingly used in close proximity. That introduces plume, thermal, EMI, and packaging constraints that are hard to assess early."
             />
-            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {problemPoints.map((point) => (
                 <article
                   key={point.title}
-                  className="rounded-[1.25rem] border border-white/8 bg-panel px-5 py-5"
+                  className={outerCardClass}
                 >
                   <h3 className="text-base font-semibold text-white">
                     {point.title}
@@ -217,26 +217,26 @@ export default function HomePage() {
         </Shell>
       </section>
 
-      <section className="py-20 sm:py-24">
+      <section className="py-16 sm:py-20 lg:py-24">
         <Shell>
           <PressureTrendsFigure />
         </Shell>
       </section>
 
-      <section id="platform" className="py-20 sm:py-24">
+      <section id="platform" className="py-16 sm:py-20 lg:py-24">
         <Shell>
           <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
             <div className="space-y-8">
               <SectionHeading
                 eyebrow="What LaunchLedger does"
-                title="Evaluate clustered propulsion configurations before full hardware integration."
-                description="LaunchLedger helps spacecraft teams study and evaluate clustered electric propulsion configurations before full hardware integration."
+                title="Evaluate clustered propulsion layouts before integration is locked."
+                description="LaunchLedger helps engineering teams compare propulsion configurations earlier, when layout changes are still practical."
               />
               <div className="space-y-4">
                 {supportAreas.map((item) => (
                   <div
                     key={item}
-                    className="flex items-start gap-3 rounded-[1.1rem] border border-white/8 bg-panel px-4 py-4"
+                    className={`${outerCardClass} flex items-start gap-3`}
                   >
                     <span className="mt-2 h-2 w-2 rounded-full bg-cyan" />
                     <p className="text-sm leading-7 text-cloud">{item}</p>
@@ -244,24 +244,23 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="max-w-2xl text-base leading-8 text-muted">
-                Instead of relying only on late-stage testing, teams can use
-                LaunchLedger to screen propulsion layouts earlier in the design
-                process.
+                Use LaunchLedger earlier in the design cycle instead of relying
+                only on late-stage hardware testing.
               </p>
             </div>
 
-            <div className="rounded-[1.75rem] border border-white/8 bg-panel p-5 shadow-glow sm:p-6">
+            <div className="rounded-[1.5rem] border border-white/8 bg-panel p-5 shadow-glow sm:p-6">
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan/75">
-                    Representative workflow
+                    Typical review flow
                   </p>
                   <h3 className="mt-3 text-xl font-semibold text-white">
-                    Early architecture review
+                    Typical Review Flow
                   </h3>
                 </div>
                 <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-cloud">
-                  Private preview
+                  Early workflow
                 </span>
               </div>
 
@@ -269,10 +268,10 @@ export default function HomePage() {
                 {workflowModules.map((module) => (
                   <article
                     key={module.title}
-                    className="rounded-[1.2rem] border border-white/8 bg-slate px-4 py-4"
+                    className={innerCardClass}
                   >
                     <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
-                      Module
+                      Step
                     </p>
                     <h4 className="mt-2 text-base font-semibold text-white">
                       {module.title}
@@ -288,19 +287,19 @@ export default function HomePage() {
         </Shell>
       </section>
 
-      <section id="capabilities" className="py-20 sm:py-24">
+      <section id="capabilities" className="py-16 sm:py-20 lg:py-24">
         <Shell>
           <div className="space-y-10">
             <SectionHeading
               eyebrow="Core capabilities"
-              title="Focused tools for clustered propulsion design review."
-              description="LaunchLedger is being designed to help teams understand cluster behavior earlier, with enough structure to support real engineering decisions."
+              title="Tools built for real clustered propulsion design decisions."
+              description="Inspect plume overlap, clearances, and layout conflicts while changes are still manageable."
             />
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               {capabilityCards.map((capability) => (
                 <article
                   key={capability.title}
-                  className="rounded-[1.35rem] border border-white/8 bg-panel px-5 py-6"
+                  className={outerCardClass}
                 >
                   <h3 className="text-lg font-semibold text-white">
                     {capability.title}
@@ -315,19 +314,19 @@ export default function HomePage() {
         </Shell>
       </section>
 
-      <section id="users" className="py-20 sm:py-24">
+      <section id="users" className="py-16 sm:py-20 lg:py-24">
         <Shell>
           <div className="space-y-10">
             <SectionHeading
-              eyebrow="Who it&apos;s for"
-              title="Built for teams making clustered propulsion decisions."
-              description="The platform is aimed at engineering groups that need to understand multi-thruster behavior before hardware integration is locked."
+              eyebrow="Who it's for"
+              title="Who it's for"
+              description="For teams making propulsion layout decisions early."
             />
             <div className="grid gap-4 lg:grid-cols-3">
               {audience.map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-[1.35rem] border border-white/8 bg-panel px-5 py-6"
+                  className={outerCardClass}
                 >
                   <h3 className="text-lg font-semibold text-white">
                     {item.title}
@@ -342,9 +341,9 @@ export default function HomePage() {
         </Shell>
       </section>
 
-      <section className="py-20 sm:py-24">
+      <section className="py-16 sm:py-20 lg:py-24">
         <Shell>
-          <div className="rounded-[1.75rem] border border-white/8 bg-panel px-6 py-8 sm:px-8 sm:py-10">
+          <div className="rounded-[1.5rem] border border-white/8 bg-panel px-5 py-8 shadow-glow sm:px-8 sm:py-10">
             <div className="grid gap-8 lg:grid-cols-[0.84fr_1.16fr] lg:items-start">
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.32em] text-cyan/75">
@@ -356,23 +355,14 @@ export default function HomePage() {
               </div>
 
               <div className="space-y-5">
-                <p className="text-base leading-8 text-cloud sm:text-lg">
+                <p className="max-w-2xl text-sm leading-7 text-cloud sm:text-base">
                   {siteConfig.founder.title}.
                 </p>
-                <p className="text-base leading-8 text-muted">
-                  LaunchLedger is being developed around real technical
-                  challenges in multi-thruster spacecraft design.
+                <p className="max-w-2xl text-sm leading-7 text-muted sm:text-base">
+                  LaunchLedger began as independent research into clustered Hall
+                  thruster plume interactions and the lack of practical
+                  early-stage design tools.
                 </p>
-                <div className="flex flex-wrap gap-3">
-                  {focusAreas.map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full border border-white/10 px-3 py-2 text-sm text-cloud"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
@@ -381,7 +371,7 @@ export default function HomePage() {
 
       <CtaBanner
         title="Interested in early access?"
-        body="LaunchLedger is currently in early development. Reach out if you’re working on clustered electric propulsion, spacecraft integration, or related system design problems."
+        body="If you're working on clustered propulsion, spacecraft integration, or related design challenges, reach out."
         note="Private development / early access"
       />
     </>

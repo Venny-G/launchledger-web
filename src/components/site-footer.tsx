@@ -6,12 +6,11 @@ import { siteConfig } from "@/lib/site";
 export function SiteFooter() {
   return (
     <footer className="border-t border-white/6">
-      <div className="mx-auto grid max-w-shell gap-10 px-6 py-14 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
+      <div className="mx-auto grid max-w-shell gap-8 px-6 py-12 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
         <div className="space-y-4">
           <BrandMark compact />
           <p className="max-w-xl text-sm leading-7 text-muted">
-            Software for clustered electric propulsion systems, focused on
-            plume interaction, spacing constraints, and integration risk.
+            Early software for clustered propulsion layout review.
           </p>
           <a
             href={`mailto:${siteConfig.contactEmail}`}

@@ -59,18 +59,21 @@ function toPointString(points: number[][]) {
 
 export function PressureTrendsFigure() {
   return (
-    <figure className="mx-auto w-full max-w-[68rem] rounded-[1.6rem] border border-white/8 bg-panel px-4 py-5 shadow-glow sm:px-6 sm:py-6">
-      <div className="space-y-3">
+    <figure className="mx-auto w-full max-w-[66rem] rounded-[1.5rem] border border-white/8 bg-panel px-4 py-5 shadow-glow sm:px-6 sm:py-6">
+      <div className="space-y-4">
         <div className="space-y-2">
           <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cyan/75">
-            Why this trend matters
+            Directional trend view
           </p>
           <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-            Why Clustered Electric Propulsion Matters by 2040
+            Why This Matters Through 2040
           </h3>
           <p className="max-w-3xl text-sm leading-7 text-muted sm:text-base">
-            Higher-power spacecraft and more demanding missions increase the
-            need for scalable electric propulsion architectures.
+            Higher-power spacecraft and more demanding missions increase
+            pressure for multi-thruster propulsion architectures.
+          </p>
+          <p className="text-xs leading-6 text-cloud sm:text-sm">
+            A directional industry trend view - not a forecast.
           </p>
         </div>
 
@@ -83,10 +86,10 @@ export function PressureTrendsFigure() {
               aria-labelledby="pressure-trends-title pressure-trends-desc"
             >
               <title id="pressure-trends-title">
-                Why Clustered Electric Propulsion Matters by 2040
+                Why This Matters Through 2040
               </title>
               <desc id="pressure-trends-desc">
-                A qualitative pressure-trend figure showing satellite power
+                A directional trend figure showing satellite power
                 availability, propulsion throughput requirements, multi-thruster
                 architecture relevance, and clustered propulsion relevance
                 increasing from today through 2040.
@@ -179,13 +182,13 @@ export function PressureTrendsFigure() {
                 fill="rgba(153,168,181,0.85)"
                 letterSpacing="0.2em"
               >
-                QUALITATIVE PRESSURE TREND
+                DIRECTIONAL TREND VIEW
               </text>
             </svg>
           </div>
         </div>
 
-        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           {trendSeries.map((series) => (
             <div
               key={series.label}
@@ -210,7 +213,7 @@ export function PressureTrendsFigure() {
         <div className="space-y-2 pt-1">
           <p className="text-sm leading-7 text-cloud">
             Clustered propulsion becomes more relevant as mission power and
-            throughput requirements scale.
+            throughput demands grow.
           </p>
           <p className="text-xs leading-6 text-muted sm:text-sm">
             Examples include high-power GEO platforms, logistics vehicles,

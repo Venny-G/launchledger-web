@@ -63,7 +63,13 @@ body::after {
 }
 
 main section {
-  scroll-margin-top: 5.5rem;
+  scroll-margin-top: 8rem;
+}
+
+@media (min-width: 768px) {
+  main section {
+    scroll-margin-top: 5.75rem;
+  }
 }
 
 summary::-webkit-details-marker {

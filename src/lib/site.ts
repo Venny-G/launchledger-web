@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "LaunchLedger",
   legalName: "LaunchLedger SpaceWorks",
   description:
-    "Software for clustered electric propulsion systems. Model plume interactions, spacing constraints, and integration risk before hardware testing begins.",
+    "Software for clustered electric propulsion systems. Study plume interactions, spacing limits, and integration risk before hardware testing begins.",
   extendedDescription:
-    "LaunchLedger helps spacecraft teams analyze clustered electric propulsion configurations before hardware testing, with a focus on plume interaction, spacing, interference, and system-level integration risk.",
+    "LaunchLedger is early software for evaluating clustered electric propulsion layouts, with emphasis on plume overlap, thermal loading, EMI proximity, and packaging conflicts.",
   url: "https://launchledger.app",
   nav: [
     { href: "#problem", label: "Problem" },
@@ -15,7 +15,7 @@ export const siteConfig = {
   ],
   contactEmail: "inquiry@launchledger.app",
   socialLabel:
-    "Clustered electric propulsion software for plume interaction, spacing, and integration risk analysis.",
+    "Clustered electric propulsion software for plume interaction, spacing, and integration review.",
   founder: {
     name: "Venkataashish Gogineni",
     title:
@@ -26,68 +26,65 @@ export const siteConfig = {
 export const problemPoints = [
   {
     title: "Plume-plume interactions",
-    body: "Adjacent thrusters can change plume shape, overlap, and downstream behavior in ways that are hard to estimate with spreadsheets alone.",
+    body: "Adjacent thrusters can distort plume shape and downstream flow behavior.",
   },
   {
     title: "Efficiency losses",
-    body: "Cluster effects can reduce expected performance and complicate how propulsion systems behave at the full-vehicle level.",
+    body: "Cluster effects can reduce expected net performance.",
   },
   {
     title: "Spacing tradeoffs",
-    body: "Layout decisions are constrained by packaging, structure, thermal margins, and how close thrusters can operate without unwanted interaction.",
+    body: "Layouts are limited by structure, thermal margins, and interaction distance.",
   },
   {
     title: "Thermal coupling",
-    body: "Hot spots and local heating can appear when multiple thrusters operate near shared surfaces and nearby hardware.",
+    body: "Shared surfaces may see localized heating.",
   },
   {
     title: "Electromagnetic interference",
-    body: "Closer layouts can create EMI concerns that affect avionics, power-processing placement, and system integration decisions.",
+    body: "Thruster placement can affect avionics and power electronics zones.",
   },
   {
     title: "Integration risk",
-    body: "These interactions often stay hidden until late review or hardware test, when fixes are slower and more expensive.",
+    body: "Late discoveries are slower and costlier to fix.",
   },
 ];
 
 export const supportAreas = [
-  "Thruster spacing analysis",
-  "Plume interaction visualization",
-  "Performance penalty estimation",
-  "Thermal and electromagnetic coupling review",
-  "Architecture-level trade studies",
+  "Thruster spacing review",
+  "Plume overlap screening",
+  "Performance impact estimates",
+  "Thermal / EMI checks",
+  "Layout trade studies",
 ];
 
 export const capabilityCards = [
   {
     title: "Cluster geometry analysis",
-    body: "Evaluate how thruster spacing and layout affect system behavior.",
+    body: "Evaluate how layout choices affect proximity and clearance.",
   },
   {
     title: "Plume interaction modeling",
-    body: "Visualize overlap, divergence, and interference across clustered configurations.",
+    body: "Inspect overlap, divergence, and likely interference zones.",
   },
   {
-    title: "Integration risk screening",
-    body: "Identify where propulsion layout choices may create thermal or electromagnetic concerns.",
+    title: "Integration screening",
+    body: "Highlight thermal or EMI concerns near sensitive systems.",
   },
   {
-    title: "Trade study support",
-    body: "Compare candidate configurations before committing to test campaigns or hardware changes.",
+    title: "Trade comparisons",
+    body: "Compare multiple candidate layouts quickly.",
   },
 ];
 
 export const audience = [
   {
     title: "Satellite manufacturers",
-    body: "Teams developing spacecraft that depend on clustered electric propulsion at higher power levels.",
+    body: "Programs integrating clustered electric propulsion into larger spacecraft.",
   },
   {
     title: "Propulsion companies",
-    body: "Organizations exploring multi-thruster architectures and early configuration tradeoffs.",
+    body: "Teams evaluating multi-thruster architectures.",
   },
-  {
-    title: "Research labs and advanced concept teams",
-    body: "Groups studying electric propulsion interactions, scalability, and system integration.",
-  },
+  { title: "Research labs", body: "Groups studying propulsion interaction and scalability." },
 ];

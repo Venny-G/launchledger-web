@@ -14,10 +14,10 @@ const config: Config = {
         muted: "#99a8b5",
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(255, 255, 255, 0.04), 0 18px 42px rgba(0, 0, 0, 0.22)",
+        glow: "0 0 0 1px rgba(255, 255, 255, 0.04), 0 12px 28px rgba(0, 0, 0, 0.18)",
       },
       maxWidth: {
-        shell: "78rem",
+        shell: "73.75rem",
       },
     },
   },

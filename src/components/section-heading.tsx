@@ -14,15 +14,16 @@ export function SectionHeading({
   const alignment = align === "center" ? "text-center items-center" : "text-left";
 
   return (
-    <div className={`flex max-w-3xl flex-col gap-4 ${alignment}`}>
-      <p className="font-mono text-xs uppercase tracking-[0.34em] text-cyan/70">
+    <div className={`flex max-w-2xl flex-col gap-3 ${alignment}`}>
+      <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-cyan/75">
         {eyebrow}
       </p>
-      <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
+      <h2 className="font-display text-2xl tracking-tight text-white sm:text-3xl lg:text-4xl">
         {title}
       </h2>
-      <p className="text-base leading-8 text-muted sm:text-lg">{description}</p>
+      <p className="max-w-2xl text-sm leading-7 text-muted sm:text-base">
+        {description}
+      </p>
     </div>
   );
 }
-

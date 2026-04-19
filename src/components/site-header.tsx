@@ -17,19 +17,33 @@ function HeaderLink({ href, label }: { href: string; label: string }) {
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/8 bg-ink/95">
-      <div className="mx-auto flex max-w-shell items-center justify-between gap-6 px-6 py-4 lg:px-8">
-        <BrandMark />
-        <div className="hidden md:flex md:items-center md:gap-8">
-          {siteConfig.nav.map((item) => (
-            <HeaderLink key={item.href} href={item.href} label={item.label} />
-          ))}
+      <div className="mx-auto max-w-shell px-5 py-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between gap-4">
+          <BrandMark />
+          <div className="hidden md:flex md:items-center md:gap-8">
+            {siteConfig.nav.map((item) => (
+              <HeaderLink key={item.href} href={item.href} label={item.label} />
+            ))}
+          </div>
+          <a
+            href={`mailto:${siteConfig.contactEmail}?subject=LaunchLedger%20Early%20Access`}
+            className="inline-flex shrink-0 rounded-full border border-cyan/25 bg-cyan/12 px-3 py-2 text-xs font-medium text-cyan transition hover:border-cyan/40 hover:bg-cyan/18 hover:text-white sm:px-4 sm:text-sm"
+          >
+            Request Early Access
+          </a>
         </div>
-        <a
-          href={`mailto:${siteConfig.contactEmail}?subject=LaunchLedger%20Early%20Access`}
-          className="inline-flex rounded-full border border-cyan/25 bg-cyan/12 px-4 py-2 text-sm font-medium text-cyan transition hover:border-cyan/40 hover:bg-cyan/18 hover:text-white"
-        >
-          Request Early Access
-        </a>
+
+        <nav className="mt-3 flex gap-2 overflow-x-auto pb-1 md:hidden">
+          {siteConfig.nav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="shrink-0 rounded-full border border-white/8 px-3 py-1.5 text-xs text-muted transition hover:border-white/14 hover:text-white"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </header>
   );

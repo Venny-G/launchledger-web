@@ -24,10 +24,14 @@ export function BrandMark({ compact = false }: BrandMarkProps) {
         />
       </span>
       <span className="flex flex-col leading-none">
-        <span className="font-mono text-[0.62rem] uppercase tracking-[0.34em] text-cyan/75">
-          {compact ? "Electric Propulsion Software" : "Clustered Electric Propulsion"}
+        <span
+          className={`font-mono text-[0.62rem] uppercase tracking-[0.32em] text-cyan/75 ${
+            compact ? "" : "hidden sm:block"
+          }`}
+        >
+          {compact ? "Clustered Propulsion Software" : "Clustered Electric Propulsion"}
         </span>
-        <span className="font-display text-sm uppercase tracking-[0.24em] text-white">
+        <span className="font-display text-xs uppercase tracking-[0.24em] text-white sm:text-sm">
           {siteConfig.name}
         </span>
       </span>
