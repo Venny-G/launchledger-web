@@ -20,9 +20,9 @@ const heroRecommendation =
   "Increase spacing beyond 240 mm and expand the power electronics keep-out zone before the layout is fixed.";
 
 const comparisonRows = [
-  { configuration: "Layout A", outcome: "High overlap" },
-  { configuration: "Layout B", outcome: "Preferred" },
-  { configuration: "Layout C", outcome: "Thermal concern" },
+  { configuration: "Layout A", outcome: "High overlap", action: "Review" },
+  { configuration: "Layout B", outcome: "Preferred", action: "Keep" },
+  { configuration: "Layout C", outcome: "Thermal concern", action: "Review" },
 ];
 
 const workflowModules = [
@@ -101,58 +101,23 @@ export default function HomePage() {
                 </span>
               </div>
 
-              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              <dl className="mt-6 grid gap-px border border-white/8 bg-white/8 sm:grid-cols-3">
                 {heroStats.map((item) => (
                   <div
                     key={item.label}
-                    className={innerCardClass}
+                    className="bg-slate px-4 py-3"
                   >
-                    <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
+                    <dt className="font-mono text-[11px] uppercase tracking-[0.22em] text-cyan/75">
                       {item.label}
-                    </p>
-                    <p className="mt-2 text-sm font-medium text-white">
+                    </dt>
+                    <dd className="mt-1.5 text-sm font-medium text-white">
                       {item.value}
-                    </p>
+                    </dd>
                   </div>
                 ))}
-              </div>
+              </dl>
 
-              <div className="mt-5 grid gap-4 xl:grid-cols-[0.95fr_1.05fr]">
-                <div className="space-y-4">
-                  <div className={innerCardClass}>
-                    <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
-                      Recommendation
-                    </p>
-                    <p className="mt-3 text-sm leading-7 text-cloud">
-                      {heroRecommendation}
-                    </p>
-                  </div>
-
-                  <div className={innerCardClass}>
-                    <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
-                      Comparison
-                    </p>
-                    <div className="mt-4 space-y-3">
-                      {comparisonRows.map((row) => (
-                        <div
-                          key={row.configuration}
-                          className="grid grid-cols-[1fr_auto] gap-3 border border-white/8 bg-black/15 px-3 py-3 text-sm"
-                        >
-                          <div>
-                            <p className="font-medium text-white">
-                              {row.configuration}
-                            </p>
-                            <p className="mt-1 text-muted">{row.outcome}</p>
-                          </div>
-                          <span className="self-start border border-white/10 px-2.5 py-1 text-xs text-cloud">
-                            {row.outcome === "Preferred" ? "Keep" : "Review"}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
+              <div className="mt-5 grid gap-4">
                 <div className={innerCardClass}>
                   <div className="relative h-56 overflow-hidden border border-white/8 bg-[#0d131a] sm:h-64">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(145,213,255,0.06),transparent_60%)]" />
@@ -162,8 +127,42 @@ export default function HomePage() {
                     <div className="absolute bottom-[18%] right-[18%] h-20 w-20 border border-cyan/30 bg-cyan/10" />
                     <div className="absolute left-[31%] top-[31%] h-24 w-24 border border-amber-200/20 bg-amber-300/10" />
                     <div className="absolute right-[31%] top-[31%] h-24 w-24 border border-amber-200/20 bg-amber-300/10" />
-                    <div className="absolute inset-x-4 bottom-4 border border-white/10 bg-black/30 px-3 py-2 text-[11px] text-cloud">
-                      Cyan indicates plume envelope. Amber marks overlap pressure near centerline.
+                  </div>
+                  <p className="mt-3 text-xs leading-6 text-muted">
+                    Cyan indicates plume envelope. Amber marks overlap pressure
+                    near centerline.
+                  </p>
+                </div>
+
+                <div className="grid gap-4 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+                  <div className={innerCardClass}>
+                    <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
+                      Recommendation
+                    </p>
+                    <p className="mt-3 text-sm leading-6 text-cloud">
+                      {heroRecommendation}
+                    </p>
+                  </div>
+
+                  <div className={innerCardClass}>
+                    <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-cyan/75">
+                      Comparison
+                    </p>
+                    <div className="mt-3 divide-y divide-white/8 border border-white/8 bg-black/15">
+                      {comparisonRows.map((row) => (
+                        <div
+                          key={row.configuration}
+                          className="grid gap-1 px-3 py-3 text-sm sm:grid-cols-[6.5rem_minmax(0,1fr)_auto] sm:items-center sm:gap-3"
+                        >
+                          <p className="font-medium text-white">
+                            {row.configuration}
+                          </p>
+                          <p className="text-muted">{row.outcome}</p>
+                          <span className="self-start border border-white/10 px-2.5 py-1 text-xs text-cloud">
+                            {row.action}
+                          </span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
